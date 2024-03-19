@@ -1,14 +1,15 @@
-
+import os
 import requests
 import sqlite3
 from datetime import datetime
 
+AUTH2 = os.environ['AUTH2']
 
 # Configuration
 DATABASE = 'product_data.db'
 BRIGHTDATA_URL = 'https://api.brightdata.com/dca/dataset?id=j_ltxdd2hgvjjbnsyua'
 HEADERS = {
-    'Authorization': 'Bearer b033bf89-f0b3-44cf-885c-9332de54a45c',
+    'Authorization': f'{AUTH2}',
     'Content-Type': 'application/json'
 }
 
