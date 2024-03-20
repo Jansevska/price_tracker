@@ -5,4 +5,5 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     AUTH = os.environ.get('AUTH')
+    AUTH2 = os.environ.get('AUTH2')
     # DATABASE_URI ='sqlite:///' + os.path.join(basedir, 'app.db')

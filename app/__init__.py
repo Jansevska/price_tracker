@@ -21,4 +21,4 @@ migrate = ...(app, db)
 # app.register_blueprint(api)
 
 # import routes
-from . import routes, models
+from . import routes, main, main2
