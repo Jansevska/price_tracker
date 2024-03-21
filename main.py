@@ -4,10 +4,10 @@ from plyer import notification
 from apscheduler.schedulers.blocking import BlockingScheduler
 import pytz
 
-AUTH2 = os.environ['AUTH2']
+AUTH = os.environ['AUTH2']
 
 headers = {
-    'Authorization': f'{AUTH2}',
+    'Authorization': f'{AUTH}',
     'Content-Type': 'application/json'
 }
 
@@ -37,6 +37,6 @@ def send_notification():
                 timeout=10
             )
 
-scheduler.add_job(send_notification, 'interval', minutes=1 ) #hours=24
+scheduler.add_job(send_notification, 'interval', hours=24)
 
 scheduler.start()
