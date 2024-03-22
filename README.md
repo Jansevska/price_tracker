@@ -19,19 +19,24 @@ You'll also need to obtain an authorization token from Bright Data and set it as
 Be mindful that it can take a few days for your account to get verified and permition given.
 
 ## CHALLENGES FACED
-I just had a general idea of what web scraping was, I've learned a lot to get to where I did and yet seems like I'm barely scraping the surface.
-A very interesting tool, endless possibilities, very exciting and at the same time very intimidating for it's endless rabbit holes.
-After a few hours of Udemy courses, I've started with BeautifulSoup, tried Selenium after repeatedly being advised that a JavaScript websites like Amazon would only work with Selenium and not BeautifulSoup.
-I had challenges with chromedriver window not staying open, giving me the impression that it was the reason the code wasn't working. I've got the window to open and stay open at one point and noticed that many times something would work for once and then not work as I would try again.
-Just yesterday I found a BrightData tutorial using their proxy approach, that got me what I wanted but just once. Gave me a .csv file with the product price - Another gitHub repository.
-I've got discouraged many times, tried many different routes.... Lost track of how many start overs. The good news (just today), going back to one of the projects and finally could accomplish what I wanted with BrightData API.
-When I finaly saw that I've got the data I was looking for, I didn't have much time to finish the project in time for the challenge's time frame.
-I took a look at SMTP and Twilio but again would need more time to implement those notifications.
-Also looked into data visualization options... again, so many routes and as a early career got pretty overwhelmed.
-Very interesting project, looking forward to finish and actually use it with the hability to choose different products, with data visualization and a text message notification system.
+Embarking on this web scraping project, my journey began with a basic understanding of the concept. The learning curve was steep; every step forward revealed the vast expanse of knowledge and techniques yet to be mastered. The project unfolded as a captivating yet daunting adventure due to its complexity and the myriad of possibilities it presented.
+
+Tool Selection and Learning Curve: Initiated my journey with BeautifulSoup, transitioning to Selenium upon realizing the limitations of BeautifulSoup with JavaScript-heavy websites like Amazon. The switch was based on extensive advice and research, including hours spent on Udemy courses to grasp the fundamentals of web scraping.
+
+Technical Difficulties: Encountered significant hurdles with Selenium, particularly with maintaining the Chromedriver window open—a factor that seemed to impact the success of my code. This inconsistency in performance led to repeated troubleshooting and modifications.
+
+Exploring New Technologies: My exploration led me to BrightData, venturing into their proxy solutions to bypass scraping restrictions. Although successful on one occasion, reproducing the success proved challenging, illustrating the volatile nature of web scraping techniques.
+
+Perseverance Amidst Setbacks: The journey was marked by numerous restarts and strategy shifts—from APIs to Browser Scraping to Web Unlocker techniques. The sheer number of approaches and tools was overwhelming, yet it underscored the diverse strategies in web scraping.
+
+Project Milestones: Despite the hurdles, a significant breakthrough was achieved with the BrightData API, marking a pivotal moment in the project's development. However, time constraints imposed by the challenge's deadline limited the project's completion and refinement.
+
+Additional Features and Future Scope: Investigated SMTP and Twilio for notification systems and delved into data visualization possibilities. Each new avenue required time and learning, contributing to the overall complexity but also to the potential value of the completed project.
+
+This project has been a testament to persistence and the willingness to navigate through uncharted territories of web scraping and data handling.
 
 ## TESTING
-Tested notification applying a 1 minute interval instead of 24 hours.
+Due to time constraints, the testing phase was abbreviated. Notifications were tested with a 1-minute interval instead of the intended 24-hour cycle. While this does not adhere to standard testing protocols, it served as a preliminary check to ensure basic functionality. Future testing phases will aim for a more thorough and time-appropriate evaluation to ensure reliability and effectiveness of the notification system.
 
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
