@@ -4,6 +4,7 @@ import os # For accessing environment variables
 from plyer import notification # For sending desktop notifications
 from apscheduler.schedulers.blocking import BlockingScheduler # For scheduling tasks
 import pytz # For handling timezones
+from app.models import get_all_prices
 
 
 # Retrieving API authorization token stored as an enviroment variable
@@ -38,17 +39,14 @@ yesterdays_price = prices[-2]
 
 # Creating a function to send desktop notifications when the price drops.
 def send_notification():
-    for price in prices: 
-        if price < yesterdays_price: # Checking if the price has dropped. If it has, send a notification.
-            # Print a message to the console indicating the price has dropped.
-            print(f'The price of the product has dropped to ${price}.')
-            # Send a desktop notification using Plyer library
-            notification.notify(
-                title='Price Alert', # Title of the notification
-                message=f'The price of the product has dropped to ${price}.', # Message of the notification
-                app_icon='icon.ico', # Icon to be displayed with the notification
-                timeout=10 # Notification timeout (disapear after 10 seconds)
-            )
+    prices = get_all_prices()
+    if len(prices) >= 2 and prices[-1].value < prices[-2].value:
+        notification.notify(
+            title='Price Alert',
+            message=f'The price of the product has dropped to ${prices[-1].value}.',
+            app_icon='icon.ico',  # Path to your icon
+            timeout=10
+        )
 
 # Adding a job to the scheduler: executing send_notification function every 24 hours
 scheduler.add_job(send_notification, 'interval', hours=24) #hours=24
