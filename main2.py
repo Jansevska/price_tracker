@@ -4,7 +4,7 @@ from plyer import notification
 from apscheduler.schedulers.blocking import BlockingScheduler
 import pytz
 
-AUTH = os.environ['AUTH2']
+AUTH = os.environ['AUTH']
 
 headers = {
     'Authorization': f'{AUTH}',
@@ -24,10 +24,11 @@ print(prices)
 
 scheduler = BlockingScheduler(timezone=pytz.timezone('UTC'))
 
+yesterdays_price = prices[-2]
 
 def send_notification():
     for price in prices:
-        if price < 349: 
+        if price < yesterdays_price: 
             print(f'The price of the product has dropped to ${price}.')
             # Send notification using Plyer library
             notification.notify(
@@ -37,6 +38,6 @@ def send_notification():
                 timeout=10
             )
 
-scheduler.add_job(send_notification, 'interval', hours=24)
+scheduler.add_job(send_notification, 'interval', hours=24) #hours=24
 
 scheduler.start()
