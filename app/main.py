@@ -25,7 +25,7 @@ headers = {
 # Defining the main function to avoid running on imports
 def main():
     with app.app_context():  # Ensures that the Flask app context is available
-        response = requests.get('https://api.brightdata.com/dca/dataset?id=j_ltyvg6sapup27klqw', headers=headers)
+        response = requests.get('https://api.brightdata.com/dca/dataset?id=j_lu5y35xfr7nipntwb', headers=headers)
         data = response.json()
         print(data)  # Printing the JSON response to the console
 
