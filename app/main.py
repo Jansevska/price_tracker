@@ -37,7 +37,7 @@ def main():
                 Price.save_price(price_value)
 
         scheduler = BlockingScheduler(timezone=pytz.timezone('UTC'))
-        scheduler.add_job(send_notification, 'interval', hours=24)
+        scheduler.add_job(send_notification, 'interval', minutes=1) # hours=24
         scheduler.start()
 
 def send_notification():
