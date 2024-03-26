@@ -21,7 +21,7 @@ def create_app():
     #     db.create_all()  # Remove this when using Flask-Migrate
 
     # Import and register your blueprint
-    from .routes import main as main_blueprint  # Adjust 'yourapplication' as per your project structure
+    from .routes import main as main_blueprint
     app.register_blueprint(main_blueprint)
     
     return app

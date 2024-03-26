@@ -32,6 +32,7 @@ def main():
         # Assuming data is a list of dictionaries containing 'finalPrice' keys
         for obj in data:
             price_value = obj.get('finalPrice', {}).get('value')
+            print(price_value)  # Printing the price value to the console
             if price_value:
                 # Save each price using your Price model method
                 Price.save_price(price_value)

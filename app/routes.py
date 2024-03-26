@@ -3,14 +3,16 @@ from .models import db, Price
 
 main = Blueprint('main', __name__)
 
-@main.route('/', methods=['GET'])
+@main.route('/', methods=['GET', 'POST'])
 def home():
+    price_data = db.session.execute(db.select(Price).order_by(db.desc(Price.timestamp))).scalars().all()
     prices = Price.get_all_prices()
-    return render_template('display.html', prices=prices)
+    return render_template('display.html', prices=prices, price_data=price_data) # 
     
-@main.route('/update', methods=['POST'])
+@main.route('/update', methods=['GET', 'POST'])
 def update_prices():
-    data = request.json
+    data = request.get_json()
+    print(data)
     if data:  # Check if there is data
         new_price = Price(value=data['finalPrice']['value'])
         Price.save_price(new_price)
