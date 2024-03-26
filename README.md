@@ -36,7 +36,8 @@ Additional Features and Future Scope: Investigated SMTP and Twilio for notificat
 Nevertheless, the project remains a source of great interest and potential. I am eager to develop it further, aiming for a comprehensive tool that can monitor various products, incorporate data visualization, and implement an effective text message notification system. The journey has been challenging, but it is far from over.
 
 ## TESTING
-Due to time constraints, the testing phase was abbreviated. Notifications were tested with a 1-minute interval instead of the intended 24-hour cycle. While this does not adhere to standard testing protocols, it served as a preliminary check to ensure basic functionality. Future testing phases will aim for a more thorough and time-appropriate evaluation to ensure reliability and effectiveness of the notification system.
+Notifications were tested with a 1-minute interval instead of the intended 24-hour cycle. While this does not adhere to standard testing protocols, it served as a preliminary check to ensure basic functionality.
+Tested the GET method using Postman the response is 200, it shows all the object's information. But I'm still having a hard time with POST method.
 
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
